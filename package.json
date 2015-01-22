@@ -1,13 +1,13 @@
 {
   "name": "bootstrap-dht-yourself",
   "version": "1.0.0",
-  "description": "",
+  "description": "bootstrap dht without root nodes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint":"eslint ./*js"
   },
-  "author": "",
+  "author": "maboiteaspam",
   "license": "WTFPL",
   "dependencies": {
     "bittorrent-dht": "^2.6.4"
