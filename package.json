@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-dht-yourself",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "WTFPL",
+  "dependencies": {
+    "bittorrent-dht": "^2.6.4"
+  },
+  "devDependencies": {
+    "magnet-uri": "^4.1.0"
+  }
+}
