@@ -13,6 +13,11 @@ function genIp(){
 
 module.exports = function(opts, then){
 
+  if (opts.debug) {
+    process.env['DEBUG'] = opts.debug;
+  }
+  var DHT = require('bittorrent-dht');
+
   if (opts.bootstrap === 'diy') {
 
     opts.bootstrap = false;
@@ -23,11 +28,6 @@ module.exports = function(opts, then){
     var lookupPorts = opts.lookupPorts
       || ['6881', '49001', '51413'];
 
-    if (opts.debug) {
-      process.env['DEBUG'] = opts.debug;
-    }
-
-    var DHT = require('bittorrent-dht');
     var dht = new DHT(opts);
 
     var knownIps = [];
@@ -60,5 +60,7 @@ module.exports = function(opts, then){
       keepLooking = false;
       then(dht);
     });
+  } else {
+    then((new DHT(opts) ) );
   }
 };
