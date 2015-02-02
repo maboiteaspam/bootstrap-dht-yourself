@@ -60,7 +60,10 @@ module.exports = function(opts, then){
       keepLooking = false;
       then(dht);
     });
+    return dht;
   } else {
-    then((new DHT(opts) ) );
+    var dht = new DHT(opts);
+    then(dht);
+    return dht;
   }
 };
