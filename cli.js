@@ -4,6 +4,7 @@ var magnet = require('magnet-uri');
 var opts = {
   bootstrap: 'diy'
   // ,debug: '*' // display debug messages
+  // ,K: 20 // the K nodes to initiate the DHT, useful for test
 };
 DHTY(opts, function(dht) {
   console.error('dht table ready');

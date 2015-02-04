@@ -18,6 +18,10 @@ module.exports = function(opts, then){
   }
   var DHT = require('bittorrent-dht');
 
+  if (opts.K) {
+    DHT. K = opts.K;
+  }
+
   if (opts.bootstrap === 'diy') {
 
     opts.bootstrap = false;
